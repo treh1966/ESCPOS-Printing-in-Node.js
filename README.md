@@ -6,7 +6,7 @@ ADVANTAGE: nothing else needed i.e. no dependencies except built in modules:
 CEAVEAT: as its based on copying files to the printer-queue biderectional commands are not supported  
 Tried to implement all basically necessary (and common betweeen printer models ) commands in an easy usable fashion
  
-TODO: improve error tracking & implement more of the full command list implement OSX
+TODO: improve error tracking, implement more of the full command list, implement OSX
 
 Prerequisites:  
 At least one RAW-printer needs to be installed on the system :  
