@@ -5,7 +5,6 @@
  CEAVEAT: as its based on copying files to the printer-queue biderectional commands are not supported
  Tried to implement all basically necessary (and common betweeen printer models ) commands in an easy usable fashion
  FEEL FREE TO USE/MODIFY THE CODE IN ANY FASHION YOU LIKE
- comments and 'requests' as well as feedback or appreciation might be send to registrierkassa@ad-min.at
  TODO: improve error tracking & implement more of the full command list implement OSX
 
  Prerequisites:
