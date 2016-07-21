@@ -27,8 +27,9 @@
        "type": "MIT",
        "url": "https://opensource.org/licenses/MIT"
    }],
-  "repositories": [ {
-    "type": "dropbox", 
-    "url": "https://www.dropbox.com/sh/q7t43fm0mv3kn14/AAB0XjFSf0BQvGY4fBPiuxkYa?dl=0"
+    "repositories": [ {
+    "type": "git", 
+    "url": "https://github.com/treh1966/ESCPOS-Printing-in-Node.js"
   }]
+
  }
