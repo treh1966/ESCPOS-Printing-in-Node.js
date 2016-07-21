@@ -1,5 +1,5 @@
 # ESCPOS-Printing-in-Node.js
- This is my implementation of ESCPOS Printing from within node nw.js applications
+ This is my implementation of ESCPOS Printing from within node nw.js applications\n
  ADVANTAGE nothing else needed i.e. no dependencies except built in modules:
 'fs' , 'os' ( in fact only needed when using on multiple platforms), and 'child process'
  CEAVEAT: as its based on copying files to the printer-queue biderectional commands are not supported
