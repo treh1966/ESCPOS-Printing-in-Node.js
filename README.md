@@ -1,5 +1,7 @@
 # ESCPOS-Printing-in-Node.js
-This is my implementation of ESCPOS Printing from within node nw.js applications  
+This is my implementation of ESCPOS Printing from within node nw.js applications   
+Also available at: https://www.npmjs.com/package/pure-escpos  
+
 ADVANTAGE: nothing else needed i.e. no dependencies except built in modules:  
 'fs' , 'os' ( in fact only needed when using on multiple platforms), and 'child process'
 
@@ -16,7 +18,10 @@ On LINUX (and OSX): just install a (driverless) RAW Printer it will be listed by
 
 Usage:
  ```javascript
- Printer = require('escpos_printing.js');
+ // if installed via npm
+ //Printer = require('escpos_printing.js');
+ // or if simply in working directory
+ Printer = require('./escpos_printing.js');
  Printer.ESCPOS_INIT();
  Printer.append(put commands and functions here);
  var sucess = Printer.ESCPOS_PRINT(currentPrinter);
