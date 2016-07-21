@@ -1,6 +1,7 @@
 # ESCPOS-Printing-in-Node.js
 This is my implementation of ESCPOS Printing from within node nw.js applications   
-Also available at: https://www.npmjs.com/package/pure-escpos  
+This is a fully working demo project, the mere module is available at:  
+https://www.npmjs.com/package/pure-escpos  
 
 ADVANTAGE: nothing else needed i.e. no dependencies except built in modules:  
 'fs' , 'os' ( in fact only needed when using on multiple platforms), and 'child process'
