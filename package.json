@@ -1,0 +1,34 @@
+{
+  "name": "ESCPOS",
+  "version": "1.0.0",
+  "author": "Thomas Höbelt",
+  "description": "EscPOS Printing from nw.js no strings attached",
+  "keywords": [
+    "demo",
+    "ESCPOS",
+    "ad-min"
+  ],
+  "main": "index.html",
+  "window": {
+    "width": 800,
+    "height": 600,
+    "title": "ESCPOS by Thomas Höbelt",
+    "toolbar": true,
+    "frame": true,
+    "fullscreen": false,
+    "kiosk": false
+  },
+  "maintainers":[ {
+    "name": "Thomas Höbelt",
+    "email": "registrierkassa@ad-min.at",
+    "web": "http://ad-min.at/kassa/index.html"
+  }],
+  "licenses": [ {
+       "type": "MIT",
+       "url": "https://opensource.org/licenses/MIT"
+   }],
+  "repositories": [ {
+    "type": "dropbox", 
+    "url": "https://www.dropbox.com/sh/q7t43fm0mv3kn14/AAB0XjFSf0BQvGY4fBPiuxkYa?dl=0"
+  }]
+ }
