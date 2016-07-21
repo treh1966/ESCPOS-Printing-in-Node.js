@@ -16,7 +16,10 @@ On LINUX (and OSX): just install a (driverless) RAW Printer it will be listed by
 
 Usage:
  ```javascript
- Printer = require('escpos_printing.js');
+ // if installed via npm
+ //Printer = require('escpos_printing.js');
+ // or if simply in working directory
+ Printer = require(./escpos_printing.js');
  Printer.ESCPOS_INIT();
  Printer.append(put commands and functions here);
  var sucess = Printer.ESCPOS_PRINT(currentPrinter);
