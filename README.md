@@ -19,7 +19,7 @@ Usage:
  // if installed via npm
  //Printer = require('escpos_printing.js');
  // or if simply in working directory
- Printer = require(./escpos_printing.js');
+ Printer = require('./escpos_printing.js');
  Printer.ESCPOS_INIT();
  Printer.append(put commands and functions here);
  var sucess = Printer.ESCPOS_PRINT(currentPrinter);
