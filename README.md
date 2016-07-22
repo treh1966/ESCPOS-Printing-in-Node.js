@@ -1,4 +1,6 @@
 # ESCPOS-Printing-in-Node.js
+
+[![Join the chat at https://gitter.im/treh1966/ESCPOS-Printing-in-Node.js](https://badges.gitter.im/treh1966/ESCPOS-Printing-in-Node.js.svg)](https://gitter.im/treh1966/ESCPOS-Printing-in-Node.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This is my implementation of ESCPOS Printing from within node nw.js applications   
 This is a fully working demo project, the mere module is available at:  
 https://www.npmjs.com/package/pure-escpos  
