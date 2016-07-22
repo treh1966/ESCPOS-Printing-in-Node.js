@@ -14,6 +14,8 @@ Tried to implement all basically necessary (and common betweeen printer models )
 TODO: improve error tracking, implement more of the full command list, implement OSX
 
 Prerequisites:  
+On Windows as of Version 1.1.1 Powershell is now used instead ofcmd(netview) to detect Printers  
+Hope this will help as no locale specific Keyword for printer is used(hardcoded).  
 At least one RAW-printer needs to be installed on the system :  
 Under WINDOWS : just use the printer driver to install, most modern printers support both modes (driver and RAW) automatically
 and !!! share the printer using a NAME which will be listed when network shares are ealuated  
