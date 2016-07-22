@@ -52,7 +52,8 @@ var doIt = require("child_process").execSync;
 var OS = "WIN";
 // this one is needed and must be set to whatever the language of your Win (cmd output) puts out for the Word "Printer"
 // as mine is German i set it to the German Expression for Printer which is "Drucker"
-var OS_PRINTERKEYWORD = "Drucker";
+// nOt necessary anymore as we use power shell now which is hopefully always in english
+//var OS_PRINTERKEYWORD = "Drucker";
 // this array will contain shared printers on Win and all lp printers on cups Systems
 exports.ESCPOS_PRINTERLIST = [];
 // needs to be filled with the calling mains window object which is done in the init function
@@ -107,20 +108,39 @@ exports.ESCPOS_PRINTERLIST.length = 0;
 // running os specific command to detect printers i.e. net view on Windows lp on linux like
 // using ifs here because if we vcant detect on which system we run its not worth the whole thing so no case/default scheme
 if (OS=="WIN") {
-			// this will return all network resources including printers
-            var listCommand = 'net view \\\\localhost';
-            // run the command and collect the output
-			var listResult = doIt( listCommand,{encoding:'utf8'});
-            // split output into single lines
-			listResultLines = listResult.split("\n");
-            // check items i.e. lines for the printer Keyword
+// old Version using cmd and net view
+//			// this will return all network resources including printers
+//            var listCommand = 'net view \\\\localhost';
+//            // run the command and collect the output
+//			var listResult = doIt( listCommand,{encoding:'utf8'});
+//            // split output into single lines
+//			listResultLines = listResult.split("\n");
+//            // check items i.e. lines for the printer Keyword
+//			for(var d=0;d<listResultLines.length;d++){
+//				if (listResultLines[d].indexOf(OS_PRINTERKEYWORD)>0) {
+//                    listLineParts = listResultLines[d].split(OS_PRINTERKEYWORD);
+//                    //name is the first part so push it to printerlist
+//					exports.ESCPOS_PRINTERLIST.push(listLineParts[0].trim());
+//                }
+//			}   
+
+// new  Version using powershell (always in english ? )
+        listCommand = "powershell  get-WmiObject Win32_Printer";
+        // collect result
+        var listResult = doIt( listCommand,{encoding:'ascii'});
+        //plit into single lines
+        listResultLines = listResult.split("\n");
 			for(var d=0;d<listResultLines.length;d++){
-				if (listResultLines[d].indexOf(OS_PRINTERKEYWORD)>0) {
-                    listLineParts = listResultLines[d].split(OS_PRINTERKEYWORD);
-                    //name is the first part so push it to printerlist
-					exports.ESCPOS_PRINTERLIST.push(listLineParts[0].trim());
+                // look for the keyword ShareName
+				if (listResultLines[d].indexOf("ShareName")>-1) {
+                    //split by colon    
+                    listLineParts = listResultLines[d].split(":");
+					if (listLineParts[1].trim().length >0) {
+                        // and push if the right part holds a share/Printer Name
+                        exports.ESCPOS_PRINTERLIST.push(listLineParts[1].trim());                    }
                 }
 			}   
+
         }
 
 if (OS=="LINUX") {

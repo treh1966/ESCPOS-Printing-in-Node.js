@@ -1,6 +1,6 @@
 {
   "name": "ESCPOS",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "author": "Thomas Höbelt",
   "description": "EscPOS Printing from nw.js no strings attached",
   "keywords": [
@@ -27,9 +27,8 @@
        "type": "MIT",
        "url": "https://opensource.org/licenses/MIT"
    }],
-    "repositories": [ {
+  "repositories": [ {
     "type": "git", 
     "url": "https://github.com/treh1966/ESCPOS-Printing-in-Node.js"
   }]
-
  }
